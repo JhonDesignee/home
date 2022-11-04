@@ -16,7 +16,7 @@ export default {
       { name: "format-detection", content: "telephone=no" }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+      { rel: "icon", type: "image/png", href: "~/static/favicon.png" }
     ], 
     script: [
       { src: "//cdn.jsdelivr.net/npm/eruda" }, 
@@ -40,6 +40,7 @@ export default {
         dark: {
           primary: colors.purple.darken1,
           secondary: colors.indigo.darken1,
+          tertiary: colors.lightBlue.darken1, 
           accent: colors.grey.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
@@ -53,7 +54,7 @@ export default {
     download: true, 
     fontsPath: "~/assets/fonts", 
     families: {
-      Montserrat: [300, 900]
+      Montserrat: [300, 500, 700, 900]
     }
   }
 }

@@ -6,11 +6,11 @@
       <v-menu rounded="lg" offset-y>
         <template #activator="{ on }">
           <v-btn icon v-on="on">
-            <v-icon>mdi-menu</v-icon>
+            <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
         </template>
-        <v-list>
-          <v-list-item v-for="(value, index) in social" :key="index" @click="openUrl(value.url)">
+        <v-list id="menu">
+          <v-list-item  v-for="(value, index) in social" :key="index" @click="openUrl(value.url)">
             <v-list-item-content>
               <v-list-item-title>{{ value.name }}</v-list-item-title>
             </v-list-item-content>
@@ -19,7 +19,7 @@
       </v-menu>
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container class="pa-0">
         <nuxt />
       </v-container>
     </v-main>
@@ -37,11 +37,15 @@
 </script>
 
 <style>
-  html {
-    font-family: serif;
-    font-weight: 900;
+  body {
+    font-family: Montserrat;
+    font-weight: 700;
   }
   .v-application--wrap {
     background-image: linear-gradient(to top right, var(--v-primary-darken2), var(--v-secondary-darken4));
+  }
+  
+  #menu {
+    background-color: var(--v-secondary-darken3);
   }
 </style>
