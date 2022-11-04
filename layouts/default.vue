@@ -1,26 +1,26 @@
 <template>
-  <v-app>
-    <v-app-bar app>
-      <v-app-bar-title>{{ title }}</v-app-bar-title>
+  <v-app dark>
+    <v-app-bar color="transparent" elevation="0" app>
+      <v-app-bar-title>Jhon Designee</v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-menu offset-y>
+      <v-menu rounded="lg" offset-y>
         <template #activator="{ on }">
           <v-btn icon v-on="on">
             <v-icon>mdi-menu</v-icon>
           </v-btn>
         </template>
         <v-list>
-          <v-list-item v-for="(value, index) in social" :key="index">
-            <a :href="value.url">
+          <v-list-item v-for="(value, index) in social" :key="index" @click="openUrl(value.url)">
+            <v-list-item-content>
               <v-list-item-title>{{ value.name }}</v-list-item-title>
-            </a>
+            </v-list-item-content>
           </v-list-item>
         </v-list>
       </v-menu>
     </v-app-bar>
     <v-main>
       <v-container>
-        <Nuxt />
+        <nuxt />
       </v-container>
     </v-main>
   </v-app>
@@ -28,26 +28,20 @@
 
 <script setup>
   import { social } from "~/static/data.json"
-</script>
-
-<script>
-  export default {
-    data() {
-      return {
-        title: "Home"
-      }
-    }, 
-    head() {
-      return {
-        title: this.title
-      }
+  
+  function openUrl(url) {
+    if (process.client) {
+      window.open(url, "_blank")
     }
   }
 </script>
 
 <style>
-  a {
-    text-decoration: none;
-    color: var(--v-primary-base);
+  html {
+    font-family: serif;
+    font-weight: 900;
+  }
+  .v-application--wrap {
+    background-image: linear-gradient(to top right, var(--v-primary-darken2), var(--v-secondary-darken4));
   }
 </style>

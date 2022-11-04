@@ -4,7 +4,7 @@ export default {
   target: "static",
   components: true,
   head: {
-    titleTemplate: "%s - JhonDesignee",
+    titleTemplate: "%s ¦ JhonDesignee",
     title: "Home",
     htmlAttrs: {
       lang: "pt-br"
@@ -23,6 +23,9 @@ export default {
       { type: "text/javascript", innerHTML: "eruda.init()" } 
     ]
   },
+  modules: [
+    "@nuxtjs/google-fonts"
+  ], 
   buildModules: [
     "@nuxtjs/vuetify"
   ], 
@@ -35,15 +38,22 @@ export default {
       dark: true,
       themes: {
         dark: {
-          primary: colors.blue.darken2,
+          primary: colors.purple.darken1,
+          secondary: colors.indigo.darken1,
           accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
         }
       }
+    }
+  }, 
+  googleFonts: {
+    download: true, 
+    fontsPath: "~/assets/fonts", 
+    families: {
+      Montserrat: [300, 900]
     }
   }
 }
