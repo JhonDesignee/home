@@ -14,6 +14,9 @@
             <v-list-item-content>
               <v-list-item-title class="ftt">{{ value.name }}</v-list-item-title>
             </v-list-item-content>
+            <v-list-item-icon>
+              <v-icon>{{ value.icon }}</v-icon>
+            </v-list-item-icon>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -25,6 +28,14 @@
     </v-main>
   </v-app>
 </template>
+
+<script>
+  export default {
+    mounted() {
+      this.$loadEruda()
+    }
+  } 
+</script>
 
 <script setup>
   import { social } from "~/static/data.json"

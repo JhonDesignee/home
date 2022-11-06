@@ -35,9 +35,10 @@
   }
   
   function share(title, url) {
-    const data = { title, url }
     if (process.client) {
-      navigator.share(data)
+      try {
+        navigator.share({ title, url })
+      } catch {}
     }
   }
 </script>

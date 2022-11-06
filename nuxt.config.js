@@ -19,8 +19,7 @@ export default {
       { rel: "icon", type: "image/x-icon", href: "/favicon.png?v2" }
     ], 
     script: [
-      { src: "//cdn.jsdelivr.net/npm/eruda" }, 
-      { type: "text/javascript", innerHTML: "eruda.init()" } 
+      { src: "//cdn.jsdelivr.net/npm/eruda" }
     ]
   },
   modules: [

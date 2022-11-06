@@ -23,16 +23,24 @@
   "social": [
     {
       "name": "WhatsApp", 
+      "icon": "mdi-whatsapp", 
       "url": "https://wa.me/message/O2NSJ44ZIVUEF1"
     }, {
       "name": "Twitter", 
+      "icon": "mdi-twitter", 
       "url": "https://twitter.com/jhondesignee"
     }, {
       "name": "Instagram", 
+      "icon": "mdi-instagram", 
       "url": "https://instagram.com/jhondesignee"
     }, {
       "name": "LinkedIn", 
+      "icon": "mdi-linkedin", 
       "url": "https://linkedin.com/in/jhondesignee"
+    }, {
+      "name": "GitHub", 
+      "icon": "mdi-github", 
+      "url": "https://github.com/JhonDesignee"
     }
   ]
 }
