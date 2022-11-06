@@ -17,7 +17,7 @@ export default {
       { property: "og:title", content: "Jhon Designee" }, 
       { property: "og:type", content: "website" }, 
       { property: "og:url", content: "https://jhondesignee.netlify.app" }, 
-      { property: "og:image", content: "/icon.png" }, 
+      { property: "og:image", content: "https://jhondesignee.netlify.app/icon.png" }, 
       { property: "og:image:alt", content: "Logo do site" }, 
       { property: "og:description", content: "Random things" }, 
       { property: "og:locale", content: "pt_BR" }
