@@ -9,10 +9,10 @@
             <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
         </template>
-        <v-list id="menu">
-          <v-list-item  v-for="(value, index) in social" :key="index" @click="openUrl(value.url)">
+        <v-list color="secondary">
+          <v-list-item  v-for="(value, index) in social" :key="index" @click="$openUrl(value.url)">
             <v-list-item-content>
-              <v-list-item-title>{{ value.name }}</v-list-item-title>
+              <v-list-item-title class="ftt">{{ value.name }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -28,24 +28,15 @@
 
 <script setup>
   import { social } from "~/static/data.json"
-  
-  function openUrl(url) {
-    if (process.client) {
-      window.open(url, "_blank")
-    }
-  }
 </script>
 
 <style>
-  body {
-    font-family: Montserrat;
-    font-weight: 700;
-  }
-  .v-application--wrap {
-    background-image: linear-gradient(to top right, var(--v-primary-darken2), var(--v-secondary-darken4));
+  .v-application, .ftt {
+    font-family: Montserrat, sans-serif !important;
+    font-weight: 700 !important;
   }
   
-  #menu {
-    background-color: var(--v-secondary-darken3);
+  .v-application--wrap {
+    background-image: linear-gradient(to top right, var(--v-primary-darken1), var(--v-secondary-darken3));
   }
 </style>

@@ -1,23 +1,23 @@
 {
   "projects": [
     {
-      "title": "test1", 
-      "description": "idjdjdjdkfkd", 
-      "image_url": "", 
-      "path": "", 
+      "title": "Gerador de link WhatsApp", 
+      "description": "Gera links para o seu contato do WhatsApp", 
+      "image": "", 
+      "path": "https://jhondesignee.github.io/web/pages/gerador-de-link-whatsapp", 
       "status": 0
     }, {
-      "title": "test2", 
-      "description": "apf8suot", 
-      "image_url": "", 
-      "path": "", 
-      "status": 1
+      "title": "Git Hub", 
+      "description": "Gera um logo baseado no design do P***Hub", 
+      "image": "", 
+      "path": "https://jhondesignee.github.io/web/pages/git-hub", 
+      "status": 0
     }, {
-      "title": "test3", 
-      "description": "9t98boepro", 
-      "image_url": "",
-      "path": "", 
-      "status": 2
+      "title": "Decorador de texto Minecraft", 
+      "description": "Gera um texto com formatações do Minecraft", 
+      "image": "",
+      "path": "https://jhondesignee.github.io/web/pages/decorador-de-texto-minecraft", 
+      "status": 1
     }
   ], 
   "social": [
@@ -25,11 +25,14 @@
       "name": "WhatsApp", 
       "url": "https://wa.me/message/O2NSJ44ZIVUEF1"
     }, {
-      "name": "Telegram", 
-      "url": "https://t.me/jhonuxu"
+      "name": "Twitter", 
+      "url": "https://twitter.com/jhondesignee"
     }, {
       "name": "Instagram", 
-      "url": "https://instagram.com/ai.que.delicinha"
+      "url": "https://instagram.com/jhondesignee"
+    }, {
+      "name": "LinkedIn", 
+      "url": "https://linkedin.com/in/jhondesignee"
     }
   ]
 }

@@ -16,7 +16,7 @@ export default {
       { name: "format-detection", content: "telephone=no" }
     ],
     link: [
-      { rel: "icon", type: "image/png", href: "~/static/favicon.png" }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.png?v2" }
     ], 
     script: [
       { src: "//cdn.jsdelivr.net/npm/eruda" }, 
@@ -29,6 +29,7 @@ export default {
   buildModules: [
     "@nuxtjs/vuetify"
   ], 
+  plugins: ["~/plugins/global.client.js"], 
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
     theme: {
