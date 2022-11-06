@@ -12,8 +12,15 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
-      { name: "format-detection", content: "telephone=no" }
+      { hid: "description", name: "description", content: "Random things" },
+      { name: "format-detection", content: "telephone=no" }, 
+      { property: "og:title", content: "Jhon Designee" }, 
+      { property: "og:type", content: "website" }, 
+      { property: "og:url", content: "https://jhondesignee.netlify.app" }, 
+      { property: "og:image", content: "/icon.png" }, 
+      { property: "og:image:alt", content: "Logo do site" }, 
+      { property: "og:description", content: "Random things" }, 
+      { property: "og:locale", content: "pt_BR" }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.png?v2" }
