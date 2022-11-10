@@ -36,7 +36,6 @@ export default {
   buildModules: [
     "@nuxtjs/vuetify"
   ], 
-  plugins: ["~/plugins/global.client.js"], 
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
     theme: {
@@ -48,8 +47,7 @@ export default {
         dark: {
           primary: colors.purple.darken1,
           secondary: colors.indigo.darken1,
-          tertiary: colors.lightBlue.darken1, 
-          accent: colors.grey.darken3,
+          accent: colors.lightBlue.darken1,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
@@ -59,8 +57,6 @@ export default {
     }
   }, 
   googleFonts: {
-    download: true, 
-    fontsPath: "~/assets/fonts", 
     families: {
       Montserrat: [300, 500, 700, 900]
     }

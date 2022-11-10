@@ -4,19 +4,19 @@
       "title": "Gerador de link WhatsApp", 
       "description": "Gera links para o seu contato do WhatsApp", 
       "image": "", 
-      "path": "https://jhondesignee.github.io/web/pages/gerador-de-link-whatsapp", 
+      "path": "/projects/gerador-de-link-whatsapp", 
       "status": 0
     }, {
       "title": "Git Hub", 
       "description": "Gera um logo baseado no design do P***Hub", 
       "image": "", 
-      "path": "https://jhondesignee.github.io/web/pages/git-hub", 
+      "path": "/projects/git-hub", 
       "status": 0
     }, {
       "title": "Decorador de texto Minecraft", 
       "description": "Gera um texto com formatações do Minecraft", 
       "image": "",
-      "path": "https://jhondesignee.github.io/web/pages/decorador-de-texto-minecraft", 
+      "path": "/projects/decorador-de-texto-minecraft", 
       "status": 1
     }
   ], 
