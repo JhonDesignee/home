@@ -57,6 +57,7 @@ export default {
     }
   }, 
   googleFonts: {
+    download: false,
     families: {
       Montserrat: [300, 500, 700, 900]
     }

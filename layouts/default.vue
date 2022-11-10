@@ -50,6 +50,6 @@
   }
   
   :is(.v-text-field--outlined, .v-textarea--outlined) fieldset {
-    border-color: lightgrey;
+    border-color: white;
   }
 </style>
