@@ -11,13 +11,13 @@
       "description": "Gera um logo baseado no design do P***Hub", 
       "image": "", 
       "path": "/projects/git-hub", 
-      "status": 0
+      "status": 2
     }, {
       "title": "Decorador de texto Minecraft", 
       "description": "Gera um texto com formatações do Minecraft", 
       "image": "",
       "path": "/projects/decorador-de-texto-minecraft", 
-      "status": 1
+      "status": 2
     }
   ], 
   "social": [
