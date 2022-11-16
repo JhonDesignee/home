@@ -10,14 +10,17 @@
           </v-btn>
         </template>
         <v-list color="secondary">
-          <v-list-item  v-for="(value, index) in social" :key="index" @click="$openUrl(value.url)">
-            <v-list-item-icon>
-              <v-icon>{{ value.icon }}</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title class="ftt">{{ value.name }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
+          <template v-for="(value, index) in social">
+            <v-list-item @click="value.name !== 'Home' ? openUrl(value.url) : $router.push(value.url)" :key="index">
+              <v-list-item-icon>
+                <v-icon>{{ value.icon }}</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title class="ftt">{{ value.name }}</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-divider v-if="value.name === 'Home'"></v-divider>
+          </template>
         </v-list>
       </v-menu>
     </v-app-bar>
@@ -31,11 +34,14 @@
 
 <script setup>
   import { social } from "~/static/data.json"
-  import { loadEruda } from "~/plugins/global.js" 
+  import { loadEruda, openUrl } from "~/plugins/global.js" 
   import { onMounted } from "vue"
   
-  onMounted(() => {
-    loadEruda()
+  onMounted(() => { loadEruda() })
+  social.unshift({
+    "name": "Home", 
+    "icon": "mdi-home", 
+    "url": "/"
   })
 </script>
 
@@ -51,5 +57,6 @@
   
   :is(.v-text-field--outlined, .v-textarea--outlined) fieldset {
     border-color: white;
+    opacity: 1;
   }
 </style>

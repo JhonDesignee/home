@@ -57,3 +57,17 @@
     output_link.value = `https://wa.me/${input_phone_number.value}${message}`
   }
 </script>
+
+<script>
+  export default {
+    head: {
+      title: "Gerador de link WhatsApp", 
+      meta: [
+         { hid: "og:title", name: "og:title", content: "Gerador de link WhatsApp" }, 
+         { hid: "description", name: "description", content: "Random things" },
+         { hid: "og:description", name: "og:description", content: "Random things" },
+         { hid: "og:url", name: "og:url", content: "https://jhondesignee.netlify.app/projects/gerador-de-link-whatsapp" }
+      ]
+    }
+  }
+</script>
