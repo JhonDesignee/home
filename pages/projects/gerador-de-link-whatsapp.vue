@@ -48,7 +48,7 @@
     if (output_link.value === "") {
       return
     }
-    copyToClipboard(output_link).then(() => {
+    copyToClipboard(output_link.value).then(() => {
       clipboard_icon.value = "mdi-clipboard-check"
       snackbar_text.value = "Link copiado!"
       snackbar.value = true
