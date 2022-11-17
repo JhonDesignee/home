@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card color="primary" v-for="(project, index) in sorted_projects" :key="index" class="my-4 rounded-lg">
+    <v-card color="secondary" v-for="(project, index) in sorted_projects" :key="index" class="my-4 rounded-lg">
       <v-list color="transparent">
         <v-list-item>
           <v-list-item-content>
@@ -18,7 +18,7 @@
       <v-card-actions>
         <v-container class="px-1 pt-0 pb-2">
           <v-btn class="rounded-lg" color="accent" :to="project.path" :disabled="project.status === 2 ? true : false">Acessar</v-btn>
-          <v-btn outlined class="rounded-lg" color="accent" @click="share(project.title, project.path)" :disabled="[1, 2].includes(project.status) ? true : false">Compartilhar</v-btn>
+          <v-btn outlined class="rounded-lg" color="accent" @click="console.log('teste')" :disabled="[1, 2].includes(project.status) ? true : false">Compartilhar</v-btn>
         </v-container>
       </v-card-actions>
     </v-card>
@@ -35,6 +35,7 @@
 
 <script setup>
   import { projects } from "~/static/data.json" 
+  import {  } from "~/plugins/global.js"
   import { ref } from "vue" 
   
   const status = ["finalizado", "inacabado", "desativado"]
@@ -44,20 +45,5 @@
   
   function getStatusColor(status) {
     return status === 0 ? "green" : status === 1 ? "orange" : "grey"
-  }
-  
-  function share(title, url) {
-    if (process.client) {
-      try {
-        navigator.share({ title, url }).then(() => {
-          snackbar_text.value = "Compartilhado!"
-        }).catch(() => {
-          snackbar_text.value = "Não foi possível compartilhar!"
-        })
-      } catch {
-        snackbar_text.value = "Não foi possível compartilhar!"
-      }
-      snackbar.value = true
-    }
   }
 </script>

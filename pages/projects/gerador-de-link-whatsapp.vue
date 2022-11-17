@@ -1,13 +1,13 @@
 <template>
   <v-container>
-    <v-card color="primary" class="rounded-lg pt-2">
+    <v-card color="secondary" class="rounded-lg pt-2">
       <v-container>
         <v-form ref="form">
           <v-text-field outlined no-resize type="number" v-model="input_phone_number" :rules="[textFieldRule]" color="accent" class="rounded-lg" label="Número de telefone" hint="formato internacional" persistent-hint></v-text-field>
           <v-textarea outlined no-resize v-model="input_message" class="rounded-lg" color="accent" label="Mensagem" hint="opcional" persistent-hint></v-textarea> 
           <v-btn block class="rounded-lg" color="accent" @click="generateWhatsAppLink()">Gerar</v-btn>
         </v-form>
-        <v-textarea outlined no-resize readonly :append-icon="clipboard_icon" v-model="output_link" color="accent" @click:append="copyToClipboard(output_link, clipboard_callback)" class="mt-6 rounded-lg"></v-textarea>
+        <v-textarea outlined no-resize readonly :append-icon="clipboard_icon" v-model="output_link" color="accent" @click:append="clipboardAction()" class="mt-6 rounded-lg"></v-textarea>
       </v-container>
     </v-card>
     <v-snackbar rounded="lg" v-model="snackbar" color="accent">
@@ -43,6 +43,20 @@
   let input_message = ref("")
   let output_link = ref("")
   let clipboard_icon = ref("mdi-clipboard-text")
+  
+  function clipboardAction() {
+    if (output_link.value === "") {
+      return
+    }
+    copyToClipboard(output_link).then(() => {
+      clipboard_icon.value = "mdi-clipboard-check"
+      snackbar_text.value = "Link copiado!"
+      snackbar.value = true
+    }).catch(() => {
+      snackbar_text.value = "Não foi possível copiar!"
+      snackbar.value = true 
+    })
+  }
   
   function textFieldRule(text) {
     return Boolean(text) || "Preencha esse campo"

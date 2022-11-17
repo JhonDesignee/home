@@ -1,5 +1,5 @@
 export function loadEruda() {
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.NODE_ENV === "development" && document) {
     const script = document.createElement("script")
     script.src = "//cdn.jsdelivr.net/npm/eruda"
     script.addEventListener("load", () => {
@@ -13,10 +13,22 @@ export function loadEruda() {
   }
 }
 
-export function openUrl(url) {
-  window.open(url, "_blank")
+export function openUrl(url, target = "_blank") {
+  if (window) {
+    window.open(url, target)
+  }
 }
 
-export function copyToClipboard(text, { resolve = () => {}, reject = () => {} }) {
-  navigator?.clipboard?.writeText(text).then(resolve).catch(reject)
+export function copyToClipboard(text) {
+  if (navigator) {
+    return navigator?.clipboard?.writeText(text)
+  }
 }
+
+export function share(title = "", text = "", url = "", files = []) {
+  try {
+    return navigator?.share({ title, text, url, files })
+  } catch (error) {
+    return Promise.reject(new Error(error.message))
+  }
+} 

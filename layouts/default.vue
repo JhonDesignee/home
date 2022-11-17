@@ -9,9 +9,9 @@
             <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
         </template>
-        <v-list color="secondary">
-          <template v-for="(value, index) in social">
-            <v-list-item @click="value.name !== 'Home' ? openUrl(value.url) : $router.push(value.url)" :key="index">
+        <v-list color="primary">
+          <v-container class="p-0 m-0" v-for="(value, index) in social" :key="index">
+            <v-list-item @click="value.name !== 'Home' ? openUrl(value.url) : $router.push(value.url)">
               <v-list-item-icon>
                 <v-icon>{{ value.icon }}</v-icon>
               </v-list-item-icon>
@@ -20,7 +20,7 @@
               </v-list-item-content>
             </v-list-item>
             <v-divider v-if="value.name === 'Home'"></v-divider>
-          </template>
+          </v-container>
         </v-list>
       </v-menu>
     </v-app-bar>
@@ -52,7 +52,7 @@
   }
   
   .v-application--wrap {
-    background-image: linear-gradient(to top right, var(--v-primary-darken1), var(--v-secondary-darken3));
+    background-color: var(--v-primary-base);
   }
   
   :is(.v-text-field--outlined, .v-textarea--outlined) fieldset {
