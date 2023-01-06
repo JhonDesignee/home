@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --port 4000",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview --port 4000",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.2.0",
+    "nuxt": "3.0.0",
+    "sass": "^1.57.1"
+  }
+}
